@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "prestart": "asciidoctor -b html5 *.adoc",
+    "start": "serve"
+  },
+  "dependencies": {
+    "serve": "^11.2.0",
+    "asciidoctor": "^2.0.3"
+  }
+}

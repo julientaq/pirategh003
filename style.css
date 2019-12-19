@@ -1,0 +1,91 @@
+:root {
+  --base-color: blue;
+}
+
+
+/* styler la lettre P avec une autre fonte */
+/* font-family: Ppersan, Helvetica, sans-serif; */
+/* les autres fontes sont déclarées dans fonts.css */
+@font-face {
+  font-family: "Ppersan";
+  src: local("Times New Roman");
+  unicode-range: U+070;
+}
+
+/* cacher des choses à l'impression */
+@media print {
+  button,
+  body > h1,
+  .pagedjs_first_page h1 {
+    display: none;
+  }
+}
+
+/* styles de base */
+
+body {
+  color: var(--base-color);
+  font-family: Ppersan, EB Garamond, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+h1 {
+  font-weight: 800;
+  font-size: 60px;
+  line-height: 1.125;
+}
+
+section {
+  margin-bottom: 2em;
+  break-before: page;
+}
+
+section .preamble {
+  border-bottom: 3px solid var(--base-color);
+  padding-bottom: 2em;
+  margin-bottom: 2em;
+}
+
+section .article-body p {
+  columns: 2;
+}
+
+/* pour se marrer */
+
+
+
+.popup {
+  border: 1px solid black;
+  box-shadow: 0 0 15px black;
+}
+
+button {
+  font-weight: bold;
+}
+
+/* Styles d'édition */
+
+#articles-index > h1 {
+  display: none;
+}
+
+.eco-pirate,
+.eco-pirate * {
+  font-family: "Barlow Semi Condensed Bold";
+}
+
+.pirate-systeme,
+.pirate-systeme * {
+  font-family: "Input Serif Compressed";
+}
+
+.pirate-corps,
+.pirate-corps * {
+  font-family: "FranklinGothic URW";
+}
+
+.pirate-chill,
+.pirate-chill * {
+  font-family: "Citizen OT";
+}

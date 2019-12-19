@@ -1,0 +1,11 @@
+@font-face {
+  font-family: "EB Garamond";
+  src: url(https://cdn.glitch.com/9a59c3ca-d898-4f5b-a463-4be0b2b8100a%2FEBGaramond08-Regular.otf?v=1576536420707);
+  font-weight: regular;
+}
+
+@font-face {
+  font-family: "EB Garamond";
+  src: url(https://cdn.glitch.com/9a59c3ca-d898-4f5b-a463-4be0b2b8100a%2FEBGaramond08-Italic.otf?v=1576536421684);
+  font-style: italic;
+}

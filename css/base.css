@@ -1,0 +1,502 @@
+@import url('https://fonts.googleapis.com/css?family=Modak&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap");
+
+/* reset css pour avoir un meilleur point de départ */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline;}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section { display: block;}
+body { line-height: 1;}
+ol,ul { list-style: none;}
+blockquote,q { quotes: none;}
+blockquote:before,blockquote:after,q:before,q:after { content: ''; content: none;}
+table { border-collapse: collapse; border-spacing: 0;}
+
+
+/* styles pour toutes les pages */
+
+body {
+  font-family: "EB Garamond";
+  margin: 0;
+  /* font-size: 0.9em; */
+  line-height: 1.5;
+  font-size: 18px;
+} 
+
+
+p {
+  margin: 0;
+}
+
+p + p {
+  text-indent: 3ch;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+}
+
+
+/* edito */
+
+
+.edito ul, nav ul {
+  height: 100vh;
+display: grid;
+grid-template-columns: repeat(8, calc(100vw / 8));
+grid-template-rows: repeat(6, calc(100vh / 6));
+
+grid-template-areas:
+  "titre titre logo drapeauj drapeau1a drapeau1b drapeau1c drapeau1d"
+  "drapeau2a contenu contenu contenu contenu contenu contenu drapeau2b"
+  "drapeau2c contenu contenu contenu contenu contenu contenu drapeau2d"
+  "drapeau2e contenu contenu contenu contenu contenu contenu drapeau2f"
+  "drapeau3a contenu contenu contenu contenu contenu contenu drapeau3b"
+  "drapeau3c drapeau3d drapeau3e drapeau3f drapeau4a drapeau4b drapeau4c drapeau4d";
+}
+
+nav li, .edito li {
+list-style-type: none;
+}
+
+/* print */
+/* li img {
+width: 35mm;
+height: 30mm;
+} */
+
+
+.edito li img , nav li img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.edito #contenu, nav #contenu  {
+grid-area: contenu;
+overflow: scroll;
+padding: 2em;
+margin: 0 auto;
+}
+
+
+
+.edito #titre, nav #titre  {
+width: calc(2 * 35mm);
+overflow: hidden;
+grid-area: titre
+
+}
+
+.edito #logo, nav #logo {
+grid-area: logo;
+}
+
+.edito  #drapeauj, nav #drapeauj { grid-area: drapeauj }
+
+.edito  #drapeau1a, nav #drapeau1a { grid-area: drapeau1a }
+.edito  #drapeau1b, nav #drapeau1b { grid-area: drapeau1b }
+.edito  #drapeau1c, nav #drapeau1c { grid-area: drapeau1c }
+.edito  #drapeau1d, nav #drapeau1d { grid-area: drapeau1d }
+.edito  #drapeau2a, nav #drapeau2a { grid-area: drapeau2a }
+.edito  #drapeau2b, nav #drapeau2b { grid-area: drapeau2b }
+.edito  #drapeau2c, nav #drapeau2c { grid-area: drapeau2c }
+.edito  #drapeau2d, nav #drapeau2d { grid-area: drapeau2d }
+.edito  #drapeau2e, nav #drapeau2e { grid-area: drapeau2e }
+.edito  #drapeau2f, nav #drapeau2f { grid-area: drapeau2f }
+.edito  #drapeau3a, nav #drapeau3a { grid-area: drapeau3a }
+.edito  #drapeau3b, nav #drapeau3b { grid-area: drapeau3b }
+.edito  #drapeau3c, nav #drapeau3c { grid-area: drapeau3c }
+.edito  #drapeau3d, nav #drapeau3d { grid-area: drapeau3d }
+.edito  #drapeau3e, nav #drapeau3e { grid-area: drapeau3e }
+.edito  #drapeau3f, nav #drapeau3f { grid-area: drapeau3f }
+.edito  #drapeau4a, nav #drapeau4a { grid-area: drapeau4a }
+.edito  #drapeau4b, nav #drapeau4b { grid-area: drapeau4b }
+.edito  #drapeau4c, nav #drapeau4c { grid-area: drapeau4c }
+.edito  #drapeau4d, nav #drapeau4d { grid-area: drapeau4d }
+
+
+@media screen and (max-width:767px) {
+
+.edito ul, nav ul {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: none;
+
+  grid-template-areas:
+    "titre titre logo drapeauj drapeau1a drapeau1b drapeau1c drapeau1d"
+    "drapeau2a contenu contenu contenu contenu contenu contenu drapeau2b"
+    "drapeau2c contenu contenu contenu contenu contenu contenu drapeau2d"
+    "drapeau2e contenu contenu contenu contenu contenu contenu drapeau2f"
+    "drapeau3a contenu contenu contenu contenu contenu contenu drapeau3b"
+    "drapeau3c drapeau3d drapeau3e drapeau3f drapeau4a drapeau4b drapeau4c drapeau4d";
+}
+}
+
+
+/*MENU GH003*/
+p.menu {
+  position : fixed;
+  top:0;
+  display : flex;
+  color : white;
+  background-color : black; 
+  width: calc(100vw / 8 * 2);
+  height: calc(100vh / 6 ); 
+  text-align : center;
+  vertical-align: center;
+  z-index: 999;
+}
+
+.menu span {
+  display: block;
+  margin: auto;
+}
+
+nav {
+  transition: all 1.1s;
+}
+
+.hide {
+  /* display: none; */
+  /* position: absolute; */
+  top: -100vh;
+  margin-bottom: -100vh;
+  opacity: 0;
+  transform: translateY(-100vh);
+
+}
+
+
+
+/*FIN MENU GH003*/
+
+/* eco */
+
+
+
+.eco header {
+  max-width: 100%;
+  margin: 14em calc(100vw / 6 + 20px);
+}
+
+.eco .partie {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 40px;
+  text-transform: uppercase;
+  margin-top: 30mm;
+}
+
+.eco h1 {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 800;
+  font-size: 75px;
+  line-height: 1;
+  margin-block-start: 1em;
+    margin-block-end: 1em;
+}
+
+.eco .autrice {
+  font-size: 30px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  text-align: right;
+}
+
+.eco img.drapeau {
+  height: 30mm;
+  width: 35mm;
+  display:block;
+  margin: auto;
+  margin-right:0;
+}
+
+
+
+
+.eco .content {
+  margin-top: 3em;
+  line-height: 1.5;
+  margin: 20px;
+}
+
+.eco .exergue {
+  margin-bottom: 2em;
+  font-style: italic;
+  max-width: 45ch;
+}
+
+.eco img.tuto {
+  width: 100%;
+  margin-top: 3em;
+}
+
+
+
+/* systeme */
+
+.systeme h1 {
+  font-family: "Input";
+}
+.systeme p {
+  max-width: 100%;
+}
+
+.systeme header {
+  margin: 0 auto;
+  max-width: 50vw;
+  margin-top: 5em;
+  text-align: center;
+}
+
+.systeme .drapeau {
+  width:15vw;
+  margin:0 auto;
+}
+
+.systeme .content {
+  margin: 0 auto;
+  margin-top: 5em;
+  position: center;
+}
+
+.systeme .principal {
+  width:50vw;
+  margin:0 auto;
+}
+
+
+.systeme button {
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.systeme p.partie {
+  font-size: 1.2em;
+  font-family: "Input";
+  font-weight:bold;
+  padding: 0;
+  margin: 1em;
+  }
+
+.systeme h1 {
+  font-size: 4em;
+  font-family: "Input";
+  line-height: 1.2;
+}
+
+.systeme h2 {
+  margin-top: 0.5em;
+  font-size: 1.8em;
+  line-height: 1.2;
+}
+
+.systeme .autrice {
+  padding: 0;
+  margin: 1em;
+}
+
+.systeme .exergue {
+  margin-top: 10em;
+}
+
+.systeme p {
+  max-width: 50vw;
+  padding: 2em;
+}
+
+.systeme img {
+  display:block;
+}
+
+
+/* corps */
+
+
+
+.corps body{
+  background-color : white;  
+}
+
+.corps p {
+  margin : 0 20vw auto;
+  max-width: 100%;
+   }
+
+
+
+
+.corps p.partie {
+  font-family: 'Modak', cursive;
+  letter-spacing: 0.06ch;
+    font-size: 2em;
+    color : black;
+    text-align: center;
+  line-height: 1.4ch;
+  margin-top : 8vh;
+  margin-bottom: 5vh;
+  
+} 
+
+.corps p.exergue {
+  padding-bottom : 2em;
+  font-style : italic;
+  font-size : 25px;
+  
+}
+
+.corps h1 {
+    font-family: 'Modak', cursive;
+  letter-spacing: 0.01ch;
+    font-size: 5em ;
+    text-align: center;
+  line-height: 1.6ch;
+  margin: 0 auto;
+  } 
+
+/*h2 sous titre !!! */
+
+.corps header {
+    margin: 0 auto;
+    padding: 4.5em 5em 3em 5em;
+  }
+
+.corps p.autrice {
+  margin: 0 auto;
+  font-size: 25px;
+  text-align: center;
+  padding-top: 1em;
+  padding-bottom: 2em;
+  }
+
+.corps .content {
+  margin: 0 auto;
+  }
+}
+
+
+.corps img.drapeau {
+  display : block;
+  margin: 0 auto;
+  width: 30vw;
+  height: 100vh/6;
+  }
+
+.corps .content img {
+    width: 100vw;
+    height: auto;
+  margin-top : 1em;
+  }
+
+
+
+  /* chill */
+
+  
+
+.chill  header {
+  font-family: "Share Tech Mono", monospace;
+  margin-top: 10em;
+  margin-bottom: 1em;
+}
+
+.chill body {
+  background: white;
+}
+
+.chill img {
+  margin: 0;
+}
+
+
+.chill img.drapeau {
+  max-width: 75px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  display: block;
+  object-fit: contain;
+}
+.chill p.partie {
+  background: black;
+  color: white;
+  max-width: 100%;
+  padding: 0.8em 1.1em 0.9em 1em;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  font-weight: 900;
+  font-size: 20px;
+}
+.chill h1 {
+  margin-top: 30px;
+  text-align: center;
+  font-weight: 900;
+  font-size: 50px;
+}
+.chill p.autrice {
+  margin-top: 10px;
+  text-align: center;
+  font-weight: 900;
+}
+.chill ol {
+  text-align: center;
+  padding: 40px;
+  list-style-type: none;
+  counter-reset: plus;
+}
+.chill ol li {
+  counter-increment: plus;
+}
+.chill ol li::before {
+  content: counter(plus, upper-roman);
+}
+.chill p {
+  max-width: 100%;
+}
+
+.chill .content {
+  max-width: 80ch;
+  margin: auto;
+}
+
+.chill article {
+  margin: 0 auto;
+}
+
+.chill h2 {
+  text-align: center;
+  font-weight: 1000;
+  font-size: 20px;
+  font-style: italic;
+}
+
+.chill p {
+  text-align: center;
+  padding: 20px;
+}
+.chill img.illu {
+  width: 30%;
+  float: left;
+  background: orange;
+}
+
+.chill .footnote {
+  float: right;
+  width: 30vw;
+  border: 1px solid with;
+  padding: 1em;
+}
+
+.chill .footnote-ref {
+  font-size: 1.5em;
+  line-height: 0;
+  padding: 0 1ch;
+  text-decoration: none;
+  color: inherit;
+}

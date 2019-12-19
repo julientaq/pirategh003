@@ -1,0 +1,38 @@
+@font-face {
+  font-family: "Barlow Semi Condensed Bold";
+  src: url(https://cdn.glitch.com/9a59c3ca-d898-4f5b-a463-4be0b2b8100a%2FBarlowSemiCondensed-Bold.ttf?v=1576536336265);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "EB Garamond";
+  src: url(https://cdn.glitch.com/9a59c3ca-d898-4f5b-a463-4be0b2b8100a%2FEBGaramond08-Regular.otf?v=1576536420707);
+  font-weight: regular;
+}
+
+@font-face {
+  font-family: "EB Garamond";
+  src: url(https://cdn.glitch.com/9a59c3ca-d898-4f5b-a463-4be0b2b8100a%2FEBGaramond08-Italic.otf?v=1576536421684);
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Input Serif Compressed";
+  src: url(https://cdn.glitch.com/9a59c3ca-d898-4f5b-a463-4be0b2b8100a%2FInputSerifCompressed-Regular.woff?v=1576537483485);
+}
+
+@font-face {
+  font-family: "Input Serif Compressed";
+  src: url(https://cdn.glitch.com/9a59c3ca-d898-4f5b-a463-4be0b2b8100a%2FInputSerifCompressed-Bold.woff?v=1576537483419);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Input Serif Compressed";
+  src: url(https://cdn.glitch.com/9a59c3ca-d898-4f5b-a463-4be0b2b8100a%2FInputSerifCompressed-Italic.woff?v=1576537483535);
+  font-style: italic;
+}
+
+/* il manque Citizen OT et FranklinGothic URW */
+/* à mettre dans le répertoire "assets" */
+/* et reproduire la manœuvre de déclaration comme ci-dessus */
