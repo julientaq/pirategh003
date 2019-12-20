@@ -58,9 +58,7 @@ grid-template-areas:
   "drapeau3c drapeau3d drapeau3e drapeau3f drapeau4a drapeau4b drapeau4c drapeau4d";
 }
 
-nav li, .edito li {
-list-style-type: none;
-}
+
 
 /* print */
 /* li img {
@@ -69,10 +67,43 @@ height: 30mm;
 } */
 
 
+.edito span.wrapper, nav span.wrapper {
+  background: red;
+  position:absolute;
+  top: calc(100vh / 6);
+  bottom: calc(100vh / 6);
+  left: calc(100vw / 8);
+  right: calc(100vw / 8);
+  z-index: 6000;
+  display:none;
+}
+
+nav li, .edito li {
+  list-style-type: none;
+  padding: 10px;
+  }
+
+.edito ul li:hover span.wrapper,
+nav ul li:hover span.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+} 
+
+.edito ul li:hover,
+nav ul li:hover {
+  transform: scale(1.2);
+}
+
 .edito li img , nav li img {
 width: 100%;
 height: 100%;
 object-fit: cover;
+
+animation-name: wave;
+animation-duration: 7s;
+animation-timing-function: cubic-bezier(0.16, 0.14, 0.82, 0.73);
+animation-iteration-count: infinite;
 }
 
 .edito #contenu, nav #contenu  {
@@ -117,24 +148,6 @@ grid-area: logo;
 .edito  #drapeau4b, nav #drapeau4b { grid-area: drapeau4b }
 .edito  #drapeau4c, nav #drapeau4c { grid-area: drapeau4c }
 .edito  #drapeau4d, nav #drapeau4d { grid-area: drapeau4d }
-
-.edito span.wrapper, nav span.wrapper {
-  background: red;
-  position:absolute;
-  top: calc(100vh / 6);
-  bottom: calc(100vh / 6);
-  left: calc(100vw / 8);
-  right: calc(100vw / 8);
-  z-index: 6000;
-  display:none;
-}
-
-ul li:hover span.wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;  
-} 
-
 
 
 
@@ -518,4 +531,47 @@ nav {
   padding: 0 1ch;
   text-decoration: none;
   color: inherit;
+}
+
+
+
+
+/* animation */
+
+
+
+
+
+@-webkit-keyframes wave {
+
+	0% {
+		/* box-shadow: 4px 5px 5px 0 rgba(0,0,0,0.1); */
+        transform: translate3d(0, 0, 0) rotateZ(5deg) rotateY(22deg);
+
+	}
+
+	20% {
+		/* box-shadow: 4px 5px 15px 0 rgba(0,0,0,0.1); */
+     transform: translate3d(0, 0, 0) rotateZ(0deg) rotateY(0deg);
+	}
+
+  40% {
+		/* box-shadow: 4px 5px 20px 0 rgba(0,0,0,0.4); */
+   transform: translate3d(0, 0, 0) rotateZ(1deg) rotateY(-3deg);
+	}
+  
+  	60% {
+		/* box-shadow: 4px 5px 5px 0 rgba(0,0,0,0.1); */
+     transform: translate3d(0, 0, 0) rotateZ(0deg) rotateY(0deg);
+	}
+
+  80% {
+		/* box-shadow: 4px 5px 5px 0 rgba(0,0,0,0.3); */
+   transform: translate3d(0, 0, 0) rotateZ(0deg) rotateY(7deg);
+	}
+  
+	100% {
+		/* box-shadow: 4px 5px 5px 0 rgba(0,0,0,0.1); */
+   transform: translate3d(0, 0, 0) rotateZ(0deg) rotateY(9deg);
+	}
 }
