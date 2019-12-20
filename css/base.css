@@ -18,7 +18,7 @@ body {
   margin: 0;
   /* font-size: 0.9em; */
   line-height: 1.5;
-  font-size: 18px;
+  font-size: 20px;
 } 
 
 
@@ -117,6 +117,25 @@ grid-area: logo;
 .edito  #drapeau4b, nav #drapeau4b { grid-area: drapeau4b }
 .edito  #drapeau4c, nav #drapeau4c { grid-area: drapeau4c }
 .edito  #drapeau4d, nav #drapeau4d { grid-area: drapeau4d }
+
+.edito span.wrapper, nav span.wrapper {
+  background: red;
+  position:absolute;
+  top: calc(100vh / 6);
+  bottom: calc(100vh / 6);
+  left: calc(100vw / 8);
+  right: calc(100vw / 8);
+  z-index: 6000;
+  display:none;
+}
+
+ul li:hover span.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+} 
+
+
 
 
 @media screen and (max-width:767px) {
